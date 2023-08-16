@@ -11,3 +11,11 @@ class student:
 
 a = student()
 print(a._student__name)  # This will print "Harry"
+
+
+print(a.__dir__())
+
+
+
+
+
