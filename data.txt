@@ -1,1 +1,37 @@
-HELLO
+1.7 File Input and Output
+The following program opens a file and reads its contents line by line as text strings:
+with open('data.txt') as file:
+for line in file:
+print(line, end='') # end='' omits the extra newline
+The open() function returns a new file object. The with statement that precedes it
+declares a block of statements (or context) where the file (file) is going to be used. Once
+control leaves this block, the file is automatically closed. If you don’t use the with
+statement, the code would need to look like this:
+file = open('data.txt')
+for line in file:
+print(line, end='') # end='' omits the extra newline
+file.close()
+It’s easy to forget the extra step of calling close() so it’s better to use the with
+statement and have the file closed for you.
+The for loop iterates line-by-line over the file until no more data is available.
+If you want to read the file in its entirety as a string, use the read() method like this:
+with open('data.txt') as file:
+data = file.read()
+If you want to read a large file in chunks, give a size hint to the read() method as
+follows:
+with open('data.txt') as file:
+while (chunk := file.read(10000)):
+print(chunk, end='')
+The := operator used in this example assigns to a variable and returns its value so that it
+can be tested by the while loop to break out. When the end of a file is reached, read()
+returns an empty string. An alternate way to write the above function is using break:
+with open('data.txt') as file:
+while True:
+chunk = file.read(10000)
+if not chunk:
+break
+print(chunk, end='')
+To make the output of a program go to a file, supply a file argument to the print()
+function:
+with open('out.txt', 'wt') as out:
+while year <= numyears:

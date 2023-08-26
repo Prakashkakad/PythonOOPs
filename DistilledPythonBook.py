@@ -61,7 +61,95 @@
 # for line in file:
 #     print(line, end='HELLO') # end='' omits the extra newline
 # file.close()
-with open('data.txt') as file:
-    while (chunk := file.read(10000)):
-        print(chunk, end='')
+# with open('data.txt') as file:
+#     while (chunk := file.read(10)):
+#         print(chunk, end='')
 
+#
+# names = [ 'Dawan', 'Paul', 'Tara', 'Prakash' ]
+# # print(names)
+# #
+# a = names[-1]
+# print(a)
+#
+# a = names.append("sham")
+# print (names)
+# names[2] ='Pratik'
+# print(names)
+# a = names.insert(1,'pranav')
+# print(names)
+#
+# for name in names:
+#     print(name)
+#
+#
+# letter = list('Prakash')
+# print(letter)
+#
+#
+# family = ["Prakash"["Pratik",["Mom"]]]
+# print(family)
+#
+# a = [1, 'Dave', 3.14, ['Mark', 7, 9, [100, 101]], 10]
+# print(a)
+
+# import sys
+# if len(sys.argv) != 2:
+#         raise SystemExit(f'Usage: {sys.argv[0]} filename')
+# rows = []
+# with open(sys.argv[1], 'rt') as file:
+#     for line in file:
+#         rows.append(line.split(','))
+# # rows is a list of this form
+# # [
+# # ['SYM', '123', '456.78']
+# # ...
+# # ]
+# total = sum([ int(row[1]) * float(row[2]) for row in rows ])
+# print(f'Total cost: {total:0.2f}')
+#  Tuple---------------------------------------------
+# opertion =tuple(aa,50,91.02)
+#
+# print(opertion[1])
+# names1 = { 'IBM', 'MSFT', 'AA' }
+# names2 = set(['IBM', 'MSFT', 'HPE', 'IBM', 'CAT'])
+# # print(names2)
+# # print(names1)
+#
+# # a = names1 | names2
+# # print(a)
+#
+# # b = names1 &                            names2
+# # print(b)
+# #
+# # c= names1 - names2
+# # print(c)
+# #
+# #
+# # d = names1 ^ names2
+# # print (d)
+#
+# names1.add('DIS')
+# print(names1)
+#
+# names1.update({'Prakash','Pratik','sahil','sohiel','saurabh','vishal'})
+# print(names1)
+#
+# names1.remove('sahil')
+# print(names1)
+#
+# names1.discard('sahiel')
+# print(names1)
+
+'''----------------------------------------------------------Dictionary------------------------------------------'''
+s = {
+'name' : 'GOOG',
+'shares' : 100,
+'price' : 490.10
+}
+
+name = s['name']
+cost = s['shares'] * s['price']
+
+print(name)
+print(cost)
