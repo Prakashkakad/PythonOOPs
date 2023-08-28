@@ -142,7 +142,7 @@
 # print(names1)
 
 '''----------------------------------------------------------Dictionary------------------------------------------'''
-s = {
+'''s = {
 'name' : 'GOOG',
 'shares' : 100,
 'price' : 490.10
@@ -153,3 +153,28 @@ cost = s['shares'] * s['price']
 
 print(name)
 print(cost)
+
+'''#_____________________________________________________ #Iteration in python  _______________________#
+
+message = 'Hello World'
+# Print out the individual characters in message
+for c in message:
+    print(c)
+
+names = ("Prakash" ,"SahiL","Pratik")
+for name in names:
+    print(name)
+
+
+# prices = { 'GOOG' : 490.10, 'IBM' : 91.50, 'AAPL' : 123.15 }
+# # Print out all of the members of a dictionary
+# for key in prices:
+#     print(key, '=', prices[key])
+
+
+# Print all of the lines in a file
+# with open('foo.txt') as file:
+#     for line in file:
+#         print(line, end='')
+
+
