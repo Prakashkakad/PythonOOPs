@@ -177,4 +177,17 @@ for name in names:
 #     for line in file:
 #         print(line, end='')
 
+ #
+ # portfolio = []
+ # with open ('portfolio') as file:
+ #     for line in file:
+ #         row = line.split(',')
+ #         try:
+ #             name = row[0]
+ #             shares = int(row[1])
+ #             price = float(row[2])
+ #         except ValueError as err:
+ #             print('Bad row',row)
+ #             print('Reason',err)
 
+ Magic
