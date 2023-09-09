@@ -355,6 +355,8 @@ print the numbers in your list.'''
 the cube of 2 is written as 2**3 in Python. Make a list of the first 10 cubes (that 
 is, the cube of each integer from 1 through 10), and use a for loop to print out 
 the value of each cube.'''
-for number in range(1,11):
-     value = number**3
-     print(value)
+# for number in range(1,11):
+     # value = number**3
+     # print(value)
+print("Prakash")
+
