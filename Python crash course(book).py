@@ -225,7 +225,7 @@ it’s back to its original order.
 list to show that its order has been changed.
 •	 Use sort() to change your list so it’s stored in reverse alphabetical order.
 Print the list to show that its order has changed.'''
-import squares as squares
+# import squares as squares
 
 # places = ["Taj Mahal","Raj Mahal","Great Wall of China"]
 #
@@ -264,7 +264,7 @@ import squares as squares
 # print("\nI really love pizza!")
 #
 #
-# '''. Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to
+# '''. Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to
 # print out the name of each animal.
 # •	 Modify your program to print a statement about each animal, such as
 # A dog would make a great pet.
@@ -355,6 +355,187 @@ print the numbers in your list.'''
 the cube of 2 is written as 2**3 in Python. Make a list of the first 10 cubes (that 
 is, the cube of each integer from 1 through 10), and use a for loop to print out 
 the value of each cube.'''
-for number in range(1,11):
-     value = number**3
-     print(value)
+# for number in range(1,11):
+#      value = number**3
+#      print(value)
+
+'''4-10. Slices: Using one of the programs you wrote in this chapter, add several 
+lines to the end of the program that do the following:
+•	 Print the message, The first three items in the list are:. Then use a slice to 
+print the first three items from that program’s list.
+•	 Print the message, Three items from the middle of the list are:. Use a slice 
+to print three items from the middle of the list.
+•	 Print the message, The last three items in the list are:. Use a slice to print 
+the last three items in the list.'''
+
+# Friends = ["OM","Karan","Tejas","Mayur","Nitin","abhishek","Akash"]
+# print(f"First Three Element of the List is:{Friends[:3]}")
+#
+# print(f"Three items from Middle is:{Friends[2:5]}")
+# print(f"Last Three Element of the list is {Friends[4:7]}")
+
+'''My Pizzas, Your Pizzas: Start with your program from Exercise 4-1 
+(page 60). Make a copy of the list of pizzas, and call it friend_pizzas.
+Then, do the following:
+•	 Add a new pizza to the original list.
+•	 Add a different pizza to the list friend_pizzas.
+•	 Prove that you have two separate lists. Print the message, My favorite 
+pizzas are:, and then use a for loop to print the first list. Print the message, 
+My friend’s favorite pizzas are:, and then use a for loop to print the  list. Make sure each new pizza is stored in the appropriate list.'''
+
+# # Start with your program from Exercise 4-1
+# pizzas = ['Margherita', 'Pepperoni', 'Hawaiian']
+#
+# # Make a copy of the list of pizzas and call it friend_pizzas
+# friend_pizzas = pizzas.copy()
+#
+# # Add a new pizza to the original list
+# pizzas.append('BBQ Chicken')
+#
+# # Add a different pizza to the list friend_pizzas
+# friend_pizzas.append('Vegetarian')
+#
+# # Prove that you have two separate lists
+# print("My favorite pizzas are:")
+# for pizza in pizzas:
+#     print(pizza)
+#
+# print("\nMy friend's favorite pizzas are:")
+# for pizza in friend_pizzas:
+#     print(pizza)
+#
+# version_number = 1  # Replace with the desired version number
+#
+#
+#
+# # List of foods
+# fruits = ["apple", "banana", "cherry"]
+# vegetables = ["carrot", "broccoli", "spinach"]
+# meats = ["chicken", "beef", "pork"]
+#
+# # First for loop to print fruits
+# print("Fruits:")
+# for fruit in fruits:
+#     print(fruit)
+#
+# # Second for loop to print vegetables
+# print("Vegetables:")
+# for vegetable in vegetables:
+#     print(vegetable)
+#
+# # Third for loop to print meats
+# print("Meats:")
+# for meat in meats:
+#     print(meat)
+
+''' Buffet: A buffet-style restaurant offers only five basic foods. Think of five 
+simple foods, and store them in a tuple.
+•	 Use a for loop to print each food the restaurant offers.
+•	 Try to modify one of the items, and make sure that Python rejects the 
+change.
+•	 The restaurant changes its menu, replacing two of the items with different 
+foods. Add a block of code that rewrites the tuple, and then use a for
+loop to print each of the items on the revised menu.
+'''
+# food = ("chicken","meat","pig","wild-pig")
+
+# for items in food:
+#     print(f"These are items {items} in restaurant")
+
+# food = ("Missial","pav","'go ha n'")
+# for items in food:
+#     print(f"These are items {items} in restaurant")
+
+'''5-1. Conditional Tests: Write a series of conditional tests. Print a statement 
+describing each test and your prediction for the results of each test. Your code 
+should look something like this:
+car = 'subaru'
+print("Is car == 'subaru'? I predict True.")
+print(car == 'subaru')
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+•	 Look closely at your results, and make sure you understand why each line 
+evaluates to True or False.
+•	 Create at least 10 tests. Have at least 5 tests evaluate to True and another 
+5 tests evaluate to False.'''
+
+# Test 1: Equality test - True
+'''num1 = 5
+num2 = 5
+print("Is num1 == num2? I predict True.")
+print(num1 == num2)
+
+# Test 2: Equality test - False
+num1 = 3
+num2 = 4
+print("Is num1 ==  num2? I perdict False")
+print(num1 == num2)
+
+# Test 3:InEquality test -True
+Pari1 = 324
+pari2 = 300
+print("Is Pari1 != Pari2? I perdict True")
+print(Pari1 != pari2)'''
+# Test 4:InEquality Test -False
+'''Prakash = ("Mango")
+Pratik  = ("Mango")
+print("Is Prakash != Pratik? I Perdict False")
+print (Prakash == Pratik)'''
+
+# Test 5 : Less than Test -True
+'''Prakash = 20
+Pratik  = 22
+print("Is Prakash <= Pratik ? I Perdict True ")
+print (Prakash <= Pratik)'''
+
+# Test 6 :Greater than test  - False
+'''Prakash = 25000
+Pratik = 19000
+print("Is Prakash <= Pratik ? I Perdict False")
+print(Prakash < Pratik)
+'''
+
+'''5-2. More Conditional Tests: You dont have to limit the number of tests you 
+create to 10. If you want to try more comparisons, write more tests and add 
+them to conditional_tests.py. Have at least one True and one False result for 
+each of the following:
+•	 Tests for equality and inequality with strings
+•	 Tests using the lower() function
+•	 Numerical tests involving equality and inequality, greater than and 
+less than, greater than or equal to, and less than or equal to
+•	 Tests using the and keyword and the or keyword
+•	 Test whether an item is in a list
+•	 Test whether an item is not in a list'''
+
+# Tests for equality and inequality with strings
+'''name1 = 'Alice'
+name2 = 'Bob'
+print("\nIs name1 == name2? I predict False.")
+print(name1 == name2)
+
+city1 = 'New York'
+city2 = 'new york'
+print("\nIs city1 == city2 (case-insensitive)? I predict True.")
+print(city1.lower() == city2.lower())
+
+# Numerical tests
+num1 = 10
+num2 = 20
+print("\nIs num1 > num2? I predict False.")
+print(num1 > num2)
+
+num3 = 15
+num4 = 15
+print("\nIs num3 >= num4? I predict True.")
+print(num3 >= num4)
+
+num5 = 30
+num6 = 25
+print("\nIs num5 < num6? I predict False.")
+print(num5 < num6)
+
+'''
+'''age = 19
+if age >= 18:
+    print("You are old enough to vote!")
+'''
