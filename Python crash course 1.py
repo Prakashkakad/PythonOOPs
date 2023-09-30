@@ -506,14 +506,207 @@ by default with a message that reads I love Python. Make a large shirt and a
 medium shirt with the default message, and a shirt of any size with a different 
 message.'''
 
-def make_shirt(size="Large", message="I love Python"):
-    print(f"Creating a {size} shirt with the message: '{message}'")
+# def make_shirt(size="Large", message="I love Python"):
+#     print(f"Creating a {size} shirt with the message: '{message}'")
+#
+# # Create a large shirt with the default message
+# make_shirt()
+#
+# # Create a medium shirt with the default message
+# make_shirt("Medium")
+#
+# # Create a shirt of any size with a different message
+# make_shirt("Small", "Hello, World!")
 
-# Create a large shirt with the default message
-make_shirt()
 
-# Create a medium shirt with the default message
-make_shirt("Medium")
+'''8-6. City Names: Write a function called city_country() that takes in the name 
+of a city and its country. The function should return a string formatted like this:
+"Santiago, Chile"
+Call your function with at least three city-country pairs, and print the value 
+that’s returned.'''
 
-# Create a shirt of any size with a different message
-make_shirt("Small", "Hello, World!")
+# def city_country(country,city):
+#     formatted_string=f'{country},{city}'
+#     print(formatted_string)
+#
+#
+# # Call the function with at least three city-country pairs
+# city1 = city_country("Santiago", "Chile")
+# city2 = city_country("Paris", "France")
+# city3 = city_country("Tokyo", "Japan")
+#
+#
+# print(city1)
+# print(city2)
+# print(city3)
+
+'''8-7. Album: Write a function called make_album() that builds a dictionary 
+describing a music album. The function should take in an artist name and an 
+album title, and it should return a dictionary containing these two pieces of 
+information. Use the function to make three dictionaries representing different 
+albums. Print each return value to show that the dictionaries are storing the 
+album information correctly.
+Add an optional parameter to make_album() that allows you to store the 
+number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s dictionary. 
+Make at least one new 
+function call that includes the number of tracks on an album.'''
+
+
+#
+# def make_album(artist,title,tracks=None):
+#     album = {"artist":artist,"title":title}
+#     if album:
+#         album["tracks"]=tracks
+#     return album
+#
+# #create a  different artist
+# album1 =make_album("taylor swift","No way out")
+# album2 =make_album("Arijit singh","Tere mere kahaani")
+# album3 = make_album("Prakash kakad","Study")
+#
+#
+# # Create an album dictionary with specifying number of tracks
+# album4 = make_album("Imagine Dragons", "Evolve", 12)
+# print(album1)
+# print(album2)
+# print(album3)
+# print(album4)
+
+
+'''def make_album(artist, title, tracks=None):
+    album = {"artist": artist, "title": title}
+    if tracks:
+        album["tracks"] = tracks
+    return album
+
+while True:
+    print("Enter album information or 'q' to quit.")
+    artist = input("Enter artist name: ")
+    if artist.lower() == 'q':
+        break
+
+    title = input("Enter album title: ")
+    if title.lower() == 'q':
+        break
+
+    album_info = make_album(artist, title)
+    print("Album information:")
+    print(album_info)
+'''
+
+
+'''8-9. Magicians: Make a list of magician’s names. Pass the list to a function 
+called show_magicians(), which prints the name of each magician in the list.'''
+
+# def show_magicians(magician_names):
+#     for magician in magician_names:
+#         print(magician)
+#
+#
+# magician_names = ["Prakash Kakad","Pratik Kakad","Sahil Kakad"]
+# show_magicians(magician_names)
+
+'''8-10. Great Magicians: Start with a copy of your program from Exercise 8-9.
+Write a function called make_great() that modifies the list of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to 
+see that the list has actually been modified.'''
+
+# def show_magicians(magician_names):
+#     for magician in magician_names:
+#         print(magician)
+#
+# def make_great(magician_names):
+#     for i in range(len(magician_names)):
+#         magician_names[i] = "the Great " + magician_names[i]
+#
+# # List of magician names
+# magician_names_list = ["Prakash Kakad","Pratik Kakad","Sahil Kakad"]
+#
+# # Call make_great to modify the magician names
+# make_great(magician_names_list)
+#
+# # Call the function to show magicians
+# show_magicians(magician_names_list)
+
+
+'''8-11. Unchanged Magicians: Start with your work from Exercise 8-10. Call the 
+function make_great() with a copy of the list of magicians’ names. Because the 
+original list will be unchanged, return the new list and store it in a separate list.
+Call show_magicians() with each list to show that you have one list of the original 
+names and one list with the Great added to each magician’s name'''
+
+# def show_magicians(magician_names):
+#     for magician in magician_names:
+#         print(magician)
+#
+# def make_great(magician_names):
+#     modified_magician_names = []
+#     for magician in magician_names:
+#         modified_magician_names.append("the Great " + magician)
+#     return modified_magician_names
+#
+# # List of magician names
+# original_magician_names = ["Prakash ","Pratik","Pranav"]
+#
+#
+# # Create a new list with the updated magician names
+# great_magician_names = make_great(original_magician_names[:])  # Passing a copy to keep the original list unchanged
+#
+# # Call the function to show original magicians
+# print("Original Magicians:")
+# show_magicians(original_magician_names)
+#
+# # Call the function to show magicians with "the Great" added
+# print("\nMagicians with 'the Great' added:")
+# show_magicians(great_magician_names)
+
+'''-1. Restaurant: Make a class called Restaurant. The __init__() method for 
+Restaurant should store two attributes: a restaurant_name and a cuisine_type.
+Make a method called describe_restaurant() that prints these two pieces of 
+information, and a method called open_restaurant() that prints a message indicating that the restaurant is open.
+Make an instance called restaurant from your class. Print the two attributes individually, and then call both methods.'''
+#
+# class Restaurant:
+#     def __init__(self,restaurant_name,cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+#
+#     def describe_restaurant(self):
+#         print(f"Restaurant Name:{self.restaurant_name}")
+#         print(f"cuisine type : {self.cuisine_type}")
+#
+#     def open_restaurant(self):
+#         print(f"The restaurant {self.restaurant_name} is now open.")
+#
+# # Create an instance of the Restaurant class
+# restaurant =  Restaurant("Mirache","chinise")
+
+# Print the individual attributes
+# print("Restaurant Name:", restaurant.restaurant_name)
+# print("Cuisine Type:", restaurant.cuisine_type)
+# #
+# # # Call the describe_restaurant() and open_restaurant() methods
+# restaurant.describe_restaurant()
+# restaurant.open_restaurant()
+
+
+'''9-2. Three Restaurants: Start with your class from Exercise 9-1. Create three 
+different instances from the class, and call describe_restaurant() for each 
+instance'''
+
+# # Create three instances of the Restaurant class
+# restaurant1 = Restaurant("Restaurant A", "Mexican")
+# restaurant2 = Restaurant("Restaurant B", "Chinese")
+# restaurant3 = Restaurant("Restaurant C", "Indian")
+#
+# # Call describe_restaurant() for each instance
+# restaurant1.describe_restaurant()
+# print()  # Add a newline for separation
+# restaurant2.describe_restaurant()
+# print()
+# restaurant3.describe_restaurant()
+
+
+
+
+
+
