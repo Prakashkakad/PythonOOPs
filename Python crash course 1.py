@@ -664,35 +664,39 @@ Restaurant should store two attributes: a restaurant_name and a cuisine_type.
 Make a method called describe_restaurant() that prints these two pieces of 
 information, and a method called open_restaurant() that prints a message indicating that the restaurant is open.
 Make an instance called restaurant from your class. Print the two attributes individually, and then call both methods.'''
-#
+
 # class Restaurant:
 #     def __init__(self,restaurant_name,cuisine_type):
 #         self.restaurant_name = restaurant_name
 #         self.cuisine_type = cuisine_type
-#
+#         self.number_served = 0
 #     def describe_restaurant(self):
 #         print(f"Restaurant Name:{self.restaurant_name}")
 #         print(f"cuisine type : {self.cuisine_type}")
 #
 #     def open_restaurant(self):
 #         print(f"The restaurant {self.restaurant_name} is now open.")
+#     def set_number_served(self,number):
+#         self.number_served= number
 #
+#     def increment_number_served(self,increment):
+#         self.number_served +=increment
 # # Create an instance of the Restaurant class
 # restaurant =  Restaurant("Mirache","chinise")
-
-# Print the individual attributes
+#
+# # Print the individual attributes
 # print("Restaurant Name:", restaurant.restaurant_name)
 # print("Cuisine Type:", restaurant.cuisine_type)
 # #
 # # # Call the describe_restaurant() and open_restaurant() methods
 # restaurant.describe_restaurant()
 # restaurant.open_restaurant()
-
-
-'''9-2. Three Restaurants: Start with your class from Exercise 9-1. Create three 
-different instances from the class, and call describe_restaurant() for each 
-instance'''
-
+#
+#
+# '''9-2. Three Restaurants: Start with your class from Exercise 9-1. Create three
+# different instances from the class, and call describe_restaurant() for each
+# instance'''
+#
 # # Create three instances of the Restaurant class
 # restaurant1 = Restaurant("Restaurant A", "Mexican")
 # restaurant2 = Restaurant("Restaurant B", "Chinese")
@@ -704,7 +708,96 @@ instance'''
 # restaurant2.describe_restaurant()
 # print()
 # restaurant3.describe_restaurant()
+#
+#
+#
+# '''9-4. Number Served: Start with your program from Exercise 9-1 (page 166).
+# Add an attribute called number_served with a default value of 0. Create an
+# instance called restaurant from this class. Print the number of customers the
+# restaurant has served, and then change this value and print it again.
+# Add a method called set_number_served() that lets you set the number
+# of customers that have been served. Call this method with a new number and
+# print the value again.
+# Add a method called increment_number_served() that lets you increment
+# the number of customers who’ve been served. Call this method with any number you like that could represent
+# how many customers were served in, say, a day of business.'''
+#
+#
+#
+#
+#
+# # Create an instance of the Restaurant class
+# restaurant = Restaurant("My Restaurant", "Italian")
+#
+# # Print the initial number of customers served
+# print(f"Number of customers served: {restaurant.number_served}")
+#
+# # Change the value and print it again
+# restaurant.number_served = 50
+# print(f"Updated number of customers served: {restaurant.number_served}")
+#
+# # Use the set_number_served method to set the number of customers served
+# restaurant.set_number_served(100)
+# print(f"Updated number of customers served: {restaurant.number_served}")
+#
+# # Use the increment_number_served method to increment the number of customers served
+# restaurant.increment_number_served(30)
+# print(f"Updated number of customers served: {restaurant.number_served}")
 
+'''9-5. Login Attempts: Add an attribute called login_attempts to your User
+class from Exercise 9-3 (page 166). Write a method called increment_
+login_attempts() that increments the value of login_attempts by 1. Write 
+another method called reset_login_attempts() that resets the value of login_
+attempts to 0.
+Make an instance of the User class and call increment_login_attempts()
+several times. Print the value of login_attempts to make sure it was incremented 
+properly, and then call reset_login_attempts(). Print login_attempts again to 
+make sure it was reset to 0.
+'''
+
+class User:
+    def __init__(self,first_name,last_name,username,email):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.username=username
+        self.login_attempts=0
+        self.email=email
+
+    def describe_user(self):
+        print(f"Hello my name is {self.first_name} {self.last_name}.")
+        print(f"My E-mail id :{self.email} And My Username is :{self.username}")
+
+    def greeting(self):
+        print(f"Welcome to party {self.first_name}!!!!!!!!!!!!!!!!!!!!!!!")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts=0
+
+
+# Create an instance of the User class
+user1 = User("John", "Doe", "johndoe", "john@example.com")
+
+# Call increment_login_attempts multiple times
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+
+# Print the value of login_attempts
+print(f"Login attempts: {user1.login_attempts}")
+
+# Call reset_login_attempts
+user1.reset_login_attempts()
+
+# Print the value of login_attempts after resetting
+print(f"Login attempts after reset: {user1.login_attempts}")
+# In this modified User class, we added the login_attempts attribute to track the number of login attempts.
+# We also added the increment_login_attempts() method to increment the login attempts and
+# the reset_login_attempts() method to reset the login attempts to 0. We then create an instance of the User class and
+# demonstrate the usage of these methods.
 
 
 
