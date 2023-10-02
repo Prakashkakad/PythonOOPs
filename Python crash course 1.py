@@ -754,52 +754,185 @@ several times. Print the value of login_attempts to make sure it was incremented
 properly, and then call reset_login_attempts(). Print login_attempts again to 
 make sure it was reset to 0.
 '''
+#
+# class User:
+#     def __init__(self,first_name,last_name,username,email):
+#         self.first_name=first_name
+#         self.last_name=last_name
+#         self.username=username
+#         self.login_attempts=0
+#         self.email=email
+#
+#     def describe_user(self):
+#         print(f"Hello my name is {self.first_name} {self.last_name}.")
+#         print(f"My E-mail id :{self.email} And My Username is :{self.username}")
+#
+#     def greeting(self):
+#         print(f"Welcome to party {self.first_name}!!!!!!!!!!!!!!!!!!!!!!!")
+#
+#     def increment_login_attempts(self):
+#         self.login_attempts += 1
+#
+#     def reset_login_attempts(self):
+#         self.login_attempts=0
+#
+#
+# # Create an instance of the User class
+# user1 = User("John", "Doe", "johndoe", "john@example.com")
+#
+# # Call increment_login_attempts multiple times
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+#
+# # Print the value of login_attempts
+# print(f"Login attempts: {user1.login_attempts}")
+#
+# # Call reset_login_attempts
+# user1.reset_login_attempts()
+#
+# # Print the value of login_attempts after resetting
+# print(f"Login attempts after reset: {user1.login_attempts}")
+# # In this modified User class, we added the login_attempts attribute to track the number of login attempts.
+# # We also added the increment_login_attempts() method to increment the login attempts and
+# # the reset_login_attempts() method to reset the login attempts to 0. We then create an instance of the User class and
+# # demonstrate the usage of these methods.
 
-class User:
-    def __init__(self,first_name,last_name,username,email):
-        self.first_name=first_name
-        self.last_name=last_name
-        self.username=username
-        self.login_attempts=0
-        self.email=email
+'''9-6. Ice Cream Stand: An ice cream stand is a specific kind of restaurant. Write 
+a class called IceCreamStand that inherits from the Restaurant class you wrote 
+in Exercise 9-1 (page 166) or Exercise 9-4 (page 171). Either version of 
+the class will work; just pick the one you like better. Add an attribute called 
+flavors that stores a list of ice cream flavors. Write a method that displays 
+these flavors. Create an instance of IceCreamStand, and call this method.'''
 
-    def describe_user(self):
-        print(f"Hello my name is {self.first_name} {self.last_name}.")
-        print(f"My E-mail id :{self.email} And My Username is :{self.username}")
+# class Restaurant:
+#     def __init__(self, restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+#
+#     def describe_restaurant(self):
+#         print(f"Restaurant Name: {self.restaurant_name}")
+#         print(f"Cuisine Type: {self.cuisine_type}")
+#
+#     def open_restaurant(self):
+#         print(f"{self.restaurant_name} is open!")
+# class IceCreamStand(Restaurant):
+#     def __init__(self, restaurant_name, cuisine_type):
+#         super().__init__(restaurant_name, cuisine_type)
+#         self.flavors = []
+#
+#     def display_flavors(self):
+#         print("Available Ice Cream Flavors:")
+#         for flavor in self.flavors:
+#             print("- " + flavor)
+#
+# # Create an instance of IceCreamStand
+# ice_cream_stand = IceCreamStand("Scoops Ahoy", "Ice Cream Parlor")
+# ice_cream_stand.flavors = ['Vanilla', 'Chocolate', 'Strawberry', 'Mint Chocolate Chip']
+#
+# # Display the ice cream flavors
+# ice_cream_stand.display_flavors()
 
-    def greeting(self):
-        print(f"Welcome to party {self.first_name}!!!!!!!!!!!!!!!!!!!!!!!")
+'''9-7. Admin: An administrator is a special kind of user. Write a class called 
+Admin that inherits from the User class you wrote in Exercise 9-3 (page 166) 
+or Exercise 9-5 (page 171). Add an attribute, privileges, that stores a list 
+of strings like "can add post", "can delete post", "can ban user", and so on.
+Write a method called show_privileges() that lists the administrator’s set of 
+privileges. Create an instance of Admin, and call your method.'''
 
-    def increment_login_attempts(self):
-        self.login_attempts += 1
+# class User:
+#     def __init__(self,first_name,last_name,username,email):
+#         self.first_name=first_name
+#         self.last_name=last_name
+#         self.username=username
+#         self.login_attempts=0
+#         self.email=email
+#
+#     def describe_user(self):
+#         print(f"Hello my name is {self.first_name} {self.last_name}.")
+#         print(f"My E-mail id :{self.email} And My Username is :{self.username}")
+#
+#     def greeting(self):
+#         print(f"Welcome to party {self.first_name}!!!!!!!!!!!!!!!!!!!!!!!")
+#
+#     def increment_login_attempts(self):
+#         self.login_attempts += 1
+#
+#     def reset_login_attempts(self):
+#         self.login_attempts=0
+#
+#
+# # Create an instance of the User class
+# user1 = User("John", "Doe", "johndoe", "john@example.com")
+#
+# # Call increment_login_attempts multiple times
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+#
+# # Print the value of login_attempts
+# print(f"Login attempts: {user1.login_attempts}")
+#
+# # Call reset_login_attempts
+# user1.reset_login_attempts()
+#
+# # Print the value of login_attempts after resetting
+# print(f"Login attempts after reset: {user1.login_attempts}")
 
-    def reset_login_attempts(self):
-        self.login_attempts=0
+
+'''add an attribute, privileges, that stores a list 
+of strings like "can add post", "can delete post", "can ban user", and so on.
+Write a method called show_privileges() that lists the administrator’s set of 
+privileges. Create an instance of Admin, and call your method.'''
+# class Admin(User):
+#     def __init__(self,first_name,last_name,username,email):
+#         super().__init__(self,first_name,last_name,username,email)
+# #         self.privileges =["can add post", "can delete post", "can ban user"     ]
+# #
+# #
+# #     def show_privilages(self):
+# #         print("Administrator privileges:")
+# #         for privilege in self.privileges:
+# #             print(f"-privilege")
+# #
+# # admin_user=Admin("Prakash","kakad","Prakash@19","prakashkakad812@gmail.com")
+# # admin_user.show_privilages()
+#
+# class Admin(User):
+#     def __init__(self, first_name, last_name, username, email):
+#         super().__init__(first_name, last_name, username, email)
+#         self.privileges = ["can add post", "can delete post", "can ban user"]
+#
+#     def show_privileges(self):
+#         print("Administrator privileges:")
+#         for privilege in self.privileges:
+#             print(f"- {privilege}")
+#
+#
+# class Admin(User):
+#     def __init__(self, first_name, last_name, username, email):
+#         super().__init__(first_name, last_name, username, email)
+#         self.privileges = Privileges()  # Create an instance of Privileges
+#
+#     def show_privileges(self):
+#         self.privileges.show_privileges()
+# # Create an instance of Admin and use the show_privileges method
+# admin_user = Admin("Admin", "User", "adminuser", "admin@example.com")
+# admin_user.show_privileges()
+#
+# # Create an instance of Admin and call the show_privileges method
+# admin_user = Admin("Admin", "User", "adminuser", "admin@example.com")
+# admin_user.show_privileges()
 
 
-# Create an instance of the User class
-user1 = User("John", "Doe", "johndoe", "john@example.com")
 
-# Call increment_login_attempts multiple times
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
+'''9-10. Imported Restaurant: Using your latest Restaurant class, store it in a module.
+ Make a separate file that imports Restaurant. Make a Restaurant instance, 
+and call one of Restaurant’s methods to show that the import statement is working properl'''
 
-# Print the value of login_attempts
-print(f"Login attempts: {user1.login_attempts}")
-
-# Call reset_login_attempts
-user1.reset_login_attempts()
-
-# Print the value of login_attempts after resetting
-print(f"Login attempts after reset: {user1.login_attempts}")
-# In this modified User class, we added the login_attempts attribute to track the number of login attempts.
-# We also added the increment_login_attempts() method to increment the login attempts and
-# the reset_login_attempts() method to reset the login attempts to 0. We then create an instance of the User class and
-# demonstrate the usage of these methods.
-
-
-
-
-
+from restaurant import Restaurant
+# Create a new instance of the  class Restaurant
+restaurant = Restaurant("Five Star","Indian")
+restaurant.describe_restaurant()
